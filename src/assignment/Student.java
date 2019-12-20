@@ -9,11 +9,11 @@ public class Student {
         this.name = name;
     }
 
-    public getSeminarsAttended() {
-
-    }
-
-    public AttendSeminar() {
-
-    }
+//    public getSeminarsAttended() {
+//
+//    }
+//
+//    public AttendSeminar() {
+//
+//    }
 }

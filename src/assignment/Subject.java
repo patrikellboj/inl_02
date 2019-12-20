@@ -6,11 +6,13 @@ public class Subject {
     private String name;
 
     //Konstruktor
-    public Subject() {
-
+    public Subject(String name) {
+        this.name = name;
     }
 
-    public viewSubjectInfo() {
-
-    }
+    // Även exempelvis i Subject finns en metod viewSubjectInfo().
+    // Då kan man bara lägga till ett attribut -info:String
+//    public viewSubjectInfo() {
+//
+//    }
 }

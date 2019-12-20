@@ -14,11 +14,11 @@ public class Attendance {
     // Exempelvis när man lägger till en Attendance behöver Seminar kunna lägga till
     // en attendance på samma sätt som Student har.
 
-    public registerAttendance(Seminar, Student) {
-
-    }
-
-    public removeAttendance(Seminar, Student) {
-
-    }
+//    public registerAttendance(Seminar, Student) {
+//        // Seminar behöver uppdateras med attendance.
+//    }
+//
+//    public removeAttendance(Seminar, Student) {
+//
+//    }
 }
