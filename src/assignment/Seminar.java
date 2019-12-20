@@ -27,8 +27,17 @@ public class Seminar {
 //
 //    }
 
+    // Egna metoder
     public String getName() {
         return this.name;
+    }
+
+    public void addSubject(Subject subject) {
+        this.subjects.add(subject);
+    }
+
+    public List<Subject> getSubjects() {
+        return this.subjects;
     }
 
 }

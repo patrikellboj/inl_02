@@ -15,4 +15,9 @@ public class Subject {
 //    public viewSubjectInfo() {
 //
 //    }
+
+    // Egna metoder
+    public String getName() {
+        return this.name;
+    }
 }

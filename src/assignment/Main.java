@@ -7,7 +7,7 @@ package assignment;
 //        todo •	Hur man lägger till en ny student till ett Program
 //        todo •	Vad närvaron är för Student X?
 //        Vilka kurser/seminarier som en lärare undervisat i?
-//        todo •	Vilka ämnen/Subjects som undervisats i ett Seminar?
+//        Vilka ämnen/Subjects som undervisats i ett Seminar?
 //        todo •	Närvaron för Seminar X?
 //        todo •	Hur man skapar en ny Attendance?
 
@@ -50,6 +50,12 @@ public class Main {
         Subject sub4 = new Subject("Lektion 4");
         Subject sub5 = new Subject("Lektion 5");
 
+        sem1.addSubject(sub1);
+        sem1.addSubject(sub2);
+        sem1.addSubject(sub3);
+        sem1.addSubject(sub4);
+        sem1.addSubject(sub5);
+
         // Utbildningsledare
         System.out.println("Utbildningsledare: " + java19.getCoordinator().getName());
 
@@ -59,12 +65,18 @@ public class Main {
 
         // • Vilka lärare som finns för ett Program?
         java19.getCoordinator().getTeachers().forEach((e) -> System.out.println("Lärare: " + e.getName()));
+        System.out.println("----------------");
 
         // Vilka kurser/seminarier som en lärare undervisat i?
         System.out.println(t1.getName() + " har undervisat i: ");
-//        System.out.println("Kurs: ");
-//        t1.getSeminarHistory() // du får ut en lista
         t1.getSeminarHistory().forEach((e) -> System.out.println("Kurs: " + e.getName()));
+        System.out.println("----------------");
+
+        // •	Vilka ämnen som undervisats i ett Seminar?
+        System.out.println("Kurs " + sem1.getName() + " har haft följande lektioner: ");
+        sem1.getSubjects().forEach((e) -> System.out.println(e.getName()));
+        System.out.println("----------------");
+
     }
 }
 
@@ -72,6 +84,5 @@ public class Main {
 //        •	Hur man lägger till en ny student till ett Program
 //        •	Vad närvaron är för Student X?
 //        •	Vilka kurser/seminarier som en lärare undervisat i?
-//        •	Vilka ämnen som undervisats i ett Seminar?
 //        •	Närvaron för Seminar X?
 //        •	Hur man skapar en ny Attendance?
