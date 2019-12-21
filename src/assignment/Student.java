@@ -5,7 +5,7 @@ package assignment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student extends Program {
+public class Student {
     private String name;
     private List<Attendance> attendedSeminars;
 

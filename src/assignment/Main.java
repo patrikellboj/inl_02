@@ -95,5 +95,4 @@ public class Main {
 
 //        •	Hur många studenter som finns i ett Program?
 //        •	Hur man lägger till en ny student till ett Program
-//        •	Närvaron för Seminar X?
 //        •	Hur man skapar en ny Attendance?
