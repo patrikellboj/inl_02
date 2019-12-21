@@ -20,7 +20,8 @@ public class Teacher {
     }
 //
 //    public getCurrentSeminar() {
-//
+//        todo fix this
+//    return this.seminars.get(0);
 //    }
 
     // Egna metoder

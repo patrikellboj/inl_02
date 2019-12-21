@@ -15,6 +15,7 @@ public class Program {
 //    public getStudents() {
 //
 //    }
+
     // Egna metoder
     public String getName() {
         return this.name;

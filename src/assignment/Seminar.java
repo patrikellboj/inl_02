@@ -13,6 +13,7 @@ public class Seminar {
     private Teacher teacher;
     private Program program;
     private List<Subject> subjects;
+    private List<Attendance> studentsAttended;
 
     //Konstruktor
     public Seminar(String name, Teacher teacher, Program program) {
@@ -20,6 +21,7 @@ public class Seminar {
         this.teacher = teacher;
         this.program = program;
         this.subjects = new ArrayList<>();
+        this.studentsAttended = new ArrayList<>();
 
     }
 
@@ -38,6 +40,14 @@ public class Seminar {
 
     public List<Subject> getSubjects() {
         return this.subjects;
+    }
+
+    public void addAttendence(Attendance attendance) {
+        this.studentsAttended.add(attendance);
+    }
+
+    public List<Attendance> getStudentsAttended() {
+        return this.studentsAttended;
     }
 
 }

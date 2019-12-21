@@ -15,7 +15,7 @@ public class ProgramCoordinator {
         this.name = name;
         this.program = program;
         this.teachers = new ArrayList<>();
-        program.setCoordinator(this); // Sätt programs coordinator till den här instansen
+        program.setCoordinator(this);
     }
 
     public void addTeacher(Teacher teacher) {
