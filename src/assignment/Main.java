@@ -1,15 +1,15 @@
 package assignment;
 
 //        Om du i din Main skulle instansiera dina klasser, kan man då få reda på följande
-//        •	Vilket program en Coordinator ansvarar för?
-//        •	Vilka lärare som finns för ett Program?
-//        •	Hur många studenter som finns i ett Program?
-//        todo •	Hur man lägger till en ny student till ett Program
-//        •	Vad närvaron är för Student X?
-//        •	Vilka kurser/seminarier som en lärare undervisat i?
-//        •	Vilka ämnen/Subjects som undervisats i ett Seminar?
-//        •	Närvaron för Seminar X?
-//        •	Hur man skapar en ny Attendance?
+//        •	Vilket program en Coordinator ansvarar för?         Rad 99
+//        •	Vilka lärare som finns för ett Program?             Rad 103
+//        •	Hur många studenter som finns i ett Program?        Rad 128
+//        •	Hur man lägger till en ny student till ett Program. Rad 81
+//        •	Vad närvaron är för Student X?                      Rad 118
+//        •	Vilka kurser/seminarier som en lärare undervisat i? Rad 108
+//        •	Vilka ämnen/Subjects som undervisats i ett Seminar? Rad 113
+//        •	Närvaron för Seminar X?                             Rad 123
+//        •	Hur man skapar en ny Attendance?                    Rad 73
 
 public class Main {
     public static void main(String[] args) {
@@ -78,9 +78,10 @@ public class Main {
         Attendance atn3 = new Attendance(sem3, s1);
         atn3.registerAttendance(sem3, s1);
 
-        // TODO: 2019-12-21 Tydliggör det här mer 
         // • Hur man lägger till en ny student till ett Program
-        // En student läggs till ett program när personen anmäls som närvarande
+        // Skapa en student
+        // Skapa en Attendance med Seminar och studenten
+        // Registrera Attendance på kursen
         
         // Skapar olika attendance och lägger till olika studenter på kursen sem1.
         Attendance atn4 = new Attendance(sem1, s2);
@@ -125,14 +126,23 @@ public class Main {
         System.out.println("----------------");
 
         // • Hur många studenter som finns i ett Program?
-        System.out.println("Studenter i programmet " + java19.getName() + ":");
-        java19.getStudents().forEach((e) -> System.out.println(e.getName()));
+        System.out.println("Det går " + java19.getStudents().size() +
+                "st studenter i programmet " + java19.getName());
         System.out.println("----------------");
 
         // Test för metoder som inte används
         // System.out.println(t2.getCurrentSeminar().getName());
+
         // sem1.getTotalAttendance();
+
         // System.out.println(c1.findTeacher("Hassan Svensson"));
         // System.out.println(c1.findTeacher("Robert Kärrbrant").getName());
+
+        // System.out.println(atn1.isAttended());
+        // atn1.removeAttendance();
+        // System.out.println(atn1.isAttended());
+
+        // sem1.getSubjects().get(3).setInfo("Denna lektion lektion kommer handla om bla bla bla");
+        // System.out.println(sub4.viewSubjectInfo());
     }
 }

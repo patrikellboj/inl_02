@@ -1,7 +1,5 @@
 package assignment;
 
-// Student känner till flera Attendance (???).
-
 import java.util.ArrayList;
 import java.util.List;
 

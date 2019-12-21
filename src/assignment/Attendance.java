@@ -26,8 +26,12 @@ public class Attendance {
         return this.student;
     }
 
-    // TODO: 2019-12-21 Fixa den här metoden 
-//    public removeAttendance(Seminar, Student) {
-//
-//    }
+    // Används inte
+    public boolean isAttended() {
+        return this.attendanceLevel;
+    }
+
+    public void removeAttendance() {
+        this.attendanceLevel = false;
+    }
 }

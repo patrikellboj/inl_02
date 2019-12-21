@@ -1,8 +1,5 @@
 package assignment;
 
-// Program känner till 1 ProgramCoordinator.
-// Program känner till flera Seminar.
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +15,6 @@ public class Program {
     }
 
     // Metoder
-
-    // TODO: 2019-12-21 Fixa den här metoden 
     public List<Student> getStudents() {
         List<Student> students = new ArrayList<>();
         for(Seminar seminar: seminars) {

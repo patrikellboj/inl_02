@@ -3,8 +3,6 @@ package assignment;
 import java.util.ArrayList;
 import java.util.List;
 
-// Teacher känner till 1 ProgramCoordinator.
-// Teacher känner till flera Seminar.
 public class Teacher {
     private String name;
     private List<Seminar> seminars;

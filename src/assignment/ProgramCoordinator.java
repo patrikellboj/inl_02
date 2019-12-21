@@ -22,15 +22,6 @@ public class ProgramCoordinator {
 
     }
 
-    // TODO: 2019-12-20 Fixa metoden findTeacher 
-    public Teacher findTeacher(String teacher) {
-        for(Teacher e : teachers) {
-            if(e.getName().equalsIgnoreCase(teacher)) {
-                return e;
-            }
-        }
-        return null;
-    }
 
     public Program getProgram() {
         return this.program;
@@ -44,4 +35,13 @@ public class ProgramCoordinator {
         return this.teachers;
     }
 
+    // Används inte
+    public Teacher findTeacher(String teacher) {
+        for(Teacher e : teachers) {
+            if(e.getName().equalsIgnoreCase(teacher)) {
+                return e;
+            }
+        }
+        return null;
+    }
 }
