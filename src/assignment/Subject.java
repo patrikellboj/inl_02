@@ -10,13 +10,15 @@ public class Subject {
         this.name = name;
     }
 
+    // Metoder
+
+    // TODO: 2019-12-21 viewsubjectInfo
     // Även exempelvis i Subject finns en metod viewSubjectInfo().
     // Då kan man bara lägga till ett attribut -info:String
 //    public viewSubjectInfo() {
 //
 //    }
 
-    // Egna metoder
     public String getName() {
         return this.name;
     }

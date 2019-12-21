@@ -25,11 +25,7 @@ public class Seminar {
 
     }
 
-//    public getTotalAttendance() {
-//
-//    }
-
-    // Egna metoder
+    // Metoder
     public String getName() {
         return this.name;
     }
@@ -48,6 +44,10 @@ public class Seminar {
 
     public List<Attendance> getStudentsAttended() {
         return this.studentsAttended;
+    }
+
+    public void getTotalAttendance() {
+        this.studentsAttended.forEach((e) -> System.out.println(e.getStudent().getName()));
     }
 
 }

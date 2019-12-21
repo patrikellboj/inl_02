@@ -18,6 +18,7 @@ public class ProgramCoordinator {
         program.setCoordinator(this);
     }
 
+    // Metoder
     public void addTeacher(Teacher teacher) {
         this.teachers.add(teacher);
 
@@ -28,7 +29,6 @@ public class ProgramCoordinator {
 //
 //    }
 
-    // Egna metoder
     public Program getProgram() {
         return this.program;
     }

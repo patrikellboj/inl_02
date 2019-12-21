@@ -12,11 +12,13 @@ public class Program {
         this.name = name;
     }
 
+    // Metoder
+
+    // TODO: 2019-12-21 Fixa den här metoden 
 //    public getStudents() {
 //
 //    }
 
-    // Egna metoder
     public String getName() {
         return this.name;
     }
