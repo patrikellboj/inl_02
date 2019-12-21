@@ -1,6 +1,4 @@
 package assignment;
-// ProgramCoordinator känner till 1 eller flera Teahcer.
-// ProgramCoordinator känner till 1 Program.
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +23,14 @@ public class ProgramCoordinator {
     }
 
     // TODO: 2019-12-20 Fixa metoden findTeacher 
-//    public findTeacher(String teacher) {
-//
-//    }
+    public Teacher findTeacher(String teacher) {
+        for(Teacher e : teachers) {
+            if(e.getName().equalsIgnoreCase(teacher)) {
+                return e;
+            }
+        }
+        return null;
+    }
 
     public Program getProgram() {
         return this.program;

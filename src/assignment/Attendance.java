@@ -1,8 +1,5 @@
 package assignment;
 
-// Attendance känner till 1 Seminar.
-// Attendance känner till 1 Student (???).
-
 public class Attendance {
     private boolean attendanceLevel = false;
     private Seminar seminar;
@@ -13,9 +10,6 @@ public class Attendance {
         this.seminar = seminar;
         this.student = student;
     }
-
-    // Exempelvis när man lägger till en Attendance behöver Seminar kunna lägga till
-    // en attendance på samma sätt som Student har.
 
     // Metoder
     public void registerAttendance(Seminar seminar, Student student) {

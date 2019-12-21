@@ -3,13 +3,13 @@ package assignment;
 //        Om du i din Main skulle instansiera dina klasser, kan man då få reda på följande
 //        •	Vilket program en Coordinator ansvarar för?
 //        •	Vilka lärare som finns för ett Program?
-//        todo •	Hur många studenter som finns i ett Program? -----------
+//        •	Hur många studenter som finns i ett Program?
 //        todo •	Hur man lägger till en ny student till ett Program
 //        •	Vad närvaron är för Student X?
 //        •	Vilka kurser/seminarier som en lärare undervisat i?
 //        •	Vilka ämnen/Subjects som undervisats i ett Seminar?
 //        •	Närvaron för Seminar X?
-//        todo •	Hur man skapar en ny Attendance?
+//        •	Hur man skapar en ny Attendance?
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +45,9 @@ public class Main {
         Seminar sem4 = new Seminar("Databasteknik & Java", t1, java19);
         Seminar sem5 = new Seminar("Java Backend", t3, java19);
 
+        // Lägg till seminar till kurs
+        java19.addSeminars(sem1);
+
         // Lägger till kurser till lärare.
         t1.addSeminar(sem2);
         t1.addSeminar(sem4);
@@ -75,6 +78,10 @@ public class Main {
         Attendance atn3 = new Attendance(sem3, s1);
         atn3.registerAttendance(sem3, s1);
 
+        // TODO: 2019-12-21 Tydliggör det här mer 
+        // • Hur man lägger till en ny student till ett Program
+        // En student läggs till ett program när personen anmäls som närvarande
+        
         // Skapar olika attendance och lägger till olika studenter på kursen sem1.
         Attendance atn4 = new Attendance(sem1, s2);
         atn4.registerAttendance(sem1, s2);
@@ -84,7 +91,7 @@ public class Main {
         atn6.registerAttendance(sem1, s4);
         Attendance atn7 = new Attendance(sem1, s5);
         atn7.registerAttendance(sem1, s5);
-
+        
         // Utbildningsledare
         System.out.println("Utbildningsledare: " + java19.getCoordinator().getName());
 
@@ -117,13 +124,15 @@ public class Main {
         sem1.getStudentsAttended().forEach((e) -> System.out.println(e.getStudent().getName()));
         System.out.println("----------------");
 
-
+        // • Hur många studenter som finns i ett Program?
+        System.out.println("Studenter i programmet " + java19.getName() + ":");
+        java19.getStudents().forEach((e) -> System.out.println(e.getName()));
+        System.out.println("----------------");
 
         // Test för metoder som inte används
         // System.out.println(t2.getCurrentSeminar().getName());
         // sem1.getTotalAttendance();
+        // System.out.println(c1.findTeacher("Hassan Svensson"));
+        // System.out.println(c1.findTeacher("Robert Kärrbrant").getName());
     }
 }
-
-//        •	Hur många studenter som finns i ett Program?
-//        •	Hur man lägger till en ny student till ett Program

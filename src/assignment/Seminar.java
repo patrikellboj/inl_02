@@ -30,6 +30,10 @@ public class Seminar {
         return this.name;
     }
 
+    public Program getProgram() {
+        return this.program;
+    }
+
     public void addSubject(Subject subject) {
         this.subjects.add(subject);
     }
