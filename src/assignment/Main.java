@@ -56,8 +56,22 @@ public class Main {
         sem1.addSubject(sub4);
         sem1.addSubject(sub5);
 
+        // • Hur man skapar en ny Attendance?
         Attendance atn1 = new Attendance(sem1, s1);
+        atn1.registerAttendance(sem1, s1);
+        Attendance atn2 = new Attendance(sem2, s1);
+        atn2.registerAttendance(sem2, s1);
+        Attendance atn3 = new Attendance(sem3, s1);
+        atn3.registerAttendance(sem3, s1);
 
+        Attendance atn4 = new Attendance(sem1, s2);
+        atn4.registerAttendance(sem1, s2);
+        Attendance atn5 = new Attendance(sem1, s3);
+        atn5.registerAttendance(sem1, s3);
+        Attendance atn6 = new Attendance(sem1, s4);
+        atn6.registerAttendance(sem1, s4);
+        Attendance atn7 = new Attendance(sem1, s5);
+        atn7.registerAttendance(sem1, s5);
 
         // Utbildningsledare
         System.out.println("Utbildningsledare: " + java19.getCoordinator().getName());
@@ -95,4 +109,3 @@ public class Main {
 
 //        •	Hur många studenter som finns i ett Program?
 //        •	Hur man lägger till en ny student till ett Program
-//        •	Hur man skapar en ny Attendance?
