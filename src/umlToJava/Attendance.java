@@ -1,4 +1,4 @@
-package assignment;
+package umlToJava;
 
 public class Attendance {
     private boolean attendanceLevel = false;

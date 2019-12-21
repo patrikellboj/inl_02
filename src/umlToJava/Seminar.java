@@ -1,4 +1,4 @@
-package assignment;
+package umlToJava;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package assignment;
+package umlToJava;
 
 public class Subject {
     private String name;

@@ -1,4 +1,4 @@
-package assignment;
+package umlToJava;
 
 //        Om du i din Main skulle instansiera dina klasser, kan man då få reda på följande
 //        •	Vilket program en Coordinator ansvarar för?         Rad 99
