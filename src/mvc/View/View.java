@@ -1,43 +1,55 @@
 package mvc.View;
 
 import mvc.Controller.Controller;
+import mvc.Model.Model;
+import mvc.PubSub.IObservable;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class View {
-    public View() {
-        Controller controller = new Controller(this);
-        Scanner scan = new Scanner(System.in);
-        while(true) {
-            String input;
-            System.out.println("\n" + "Visa bilar(a), Hyr ut bil(b), Lägg till bil(c) exit(d)");
-            input = scan.nextLine();
+public class View implements IObservable {
 
-            switch (input) {
-                case "a":
-                    // Visa bilar med deras indexposition
-                    // Kalla på metoden
-                    break;
-                case "b":
-                    // Välj vilken bil med en siffra.
-                    System.out.println("Vilken bil vill du hyra ut. Välj med en siffra.");
-                    input = scan.nextLine();
-                    // Kalla på metoden
-                    break;
-                case "c":
-                    // Lägg till bil
-                    String make = null, model = null;
-                    System.out.println("Skriv in märke:");
-                    input = scan.nextLine();
-                    make = input;
-                    System.out.println("Skriv in model:");
-                    input = scan.nextLine();
-                    model = input;
-                    controller.addCar(make, model);
-                    break;
-                case "d":
-                    System.exit(0);
-            }
+    private Model model;
+    private Scanner scan;
+
+    public View(Model model) {
+        this.model = model;
+        model.addObserver(this);
+        scan = new Scanner(System.in);
+    }
+
+//    public void start() {
+//        System.out.println("\n" + "Hyr ut bil(a)." + " Lägg till bil(b)." + " Avsluta(c).");
+//    }
+
+    public void showOptions(String option) {
+        String input;
+        switch (option) {
+            case "start":
+//                System.out.println("\n" + "Hyr ut bil(a)." + " Lägg till bil(b)." + " Avsluta(c).");
+                input = scan.nextLine();
+                showOptions(input);
+                break;
+            case "a":
+                System.out.println("Ange index på den bil du vill hyra ut (anges ovan)");
+                input = scan.nextLine();
+                break;
+            case "b":
+                System.out.println("Lista med alla bilar");
+                break;
+            case "c":
+                System.exit(0);
+                break;
+            default:
+                return;
         }
     }
+
+    @Override
+    public void update(Object data) {
+        System.out.println(data);
+        //this.updateView((String) news);
+    }
 }
+
+

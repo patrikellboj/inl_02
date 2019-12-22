@@ -11,7 +11,7 @@ public class Car {
         this.availability = true;
     }
 
-    public void rentCar() {
+    public void rentOutCar() {
         this.availability = false;
     }
 
@@ -19,8 +19,9 @@ public class Car {
     @Override
     public String toString() {
         return "Märke: " + this.make +
-                " Modell:" + this.model +
-                "Tillgänglig: " + availability;
+               " Modell: " + this.model +
+               " Tillgänglig: " + availability +
+               "\n";
     }
 //    public void returnCar() {
 //        this.availability = true;
